@@ -33,7 +33,7 @@ class _BenefitFragmentState extends State<BenefitFragment> {
 
             ...benefitList.map((element)=>BenefitItem(benefit: element)).toList(),
           ],
-        ).pSymmetric(h: 20),
+        ).pSymmetric(h: 20, ),
       ),
     );
   }

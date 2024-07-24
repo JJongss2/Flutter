@@ -14,7 +14,7 @@ class DarkAppColors extends AbstractThemeColors {
   Color get badgeBg => AppColors.darkOrange;
 
   @override
-  Color get divider => const Color.fromARGB(255, 93, 93, 93);
+  Color get divider => const Color.fromARGB(255, 42, 42, 42);
 
   @override
   Color get drawerBg => const Color.fromARGB(255, 42, 42, 42);
