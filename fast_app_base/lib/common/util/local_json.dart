@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
+import '../../screen/main/tab/stock/vo_simple_stock.dart';
 import '../../screen/opensource/vo_package.dart';
 
 class LocalJson {
@@ -26,20 +27,15 @@ class LocalJson {
   }
 
   static Future<String> getJsonString(String filePath) async {
-    return await rootBundle.loadString('assets/$filePath');
+    return await rootBundle.loadString('assets/json/$filePath');
   }
 }
 
 T _tryConverting<T>(dynamic json) {
+
   switch (T) {
-    case Package:
-      return Package.fromJson(json) as T;
+    case SimpleStock:
     default:
-      throw Exception("Please check _tryConverting method");
+      return SimpleStock.fromJson(json) as T;
   }
-  // switch (T) {
-  //   case ExampleVO:
-  //   default:
-  //     return ExampleVO.fromJson(json) as T;
-  // }
 }

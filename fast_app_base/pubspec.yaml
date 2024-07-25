@@ -92,6 +92,7 @@ dev_dependencies:
   flutter_oss_licenses: ^2.0.1
   test: ^1.22.0
   timeago: ^3.7.0
+  get: ^4.6.6
 
 
 

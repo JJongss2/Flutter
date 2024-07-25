@@ -24,9 +24,7 @@ class ImageButton extends StatelessWidget {
     return Padding(
       padding: padding,
       child: Tap(
-          onTap: () {
-            context.showSnackbar("검색");
-          },
+          onTap: onTap,
           child: Image.asset(
             imagePath,
             height: height,
