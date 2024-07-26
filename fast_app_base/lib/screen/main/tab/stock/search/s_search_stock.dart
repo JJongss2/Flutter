@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'w_popular_search_stock_list.dart';
+import 'w_search_auto_complete_list.dart';
 import 'w_search_history_stock_list.dart';
 import 'w_stock_search_app_bar.dart';
 
@@ -14,12 +15,15 @@ class SearchStockScreen extends StatefulWidget {
   State<SearchStockScreen> createState() => _SearchStockScreenState();
 }
 
-class _SearchStockScreenState extends State<SearchStockScreen> {
+class _SearchStockScreenState extends State<SearchStockScreen> with SearchStockDataProvider {
   final controller = TextEditingController();
 
   @override
-  void initState() {
+  void initState() { //initState 는 생성자가 생성될 때 호출되는 것이 아님
     Get.put(SearchStockData());
+    controller.addListener((){
+      searchData.search(controller.text);
+    });
     super.initState();
   }
   @override
@@ -32,13 +36,16 @@ class _SearchStockScreenState extends State<SearchStockScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: StockSearchAppBar(controller : controller),
-      body: ListView(
-        children: [
-          SearchHistoryList(),
-          height20,
-          PopularSearchStockList(),
-        ],
-      ),
+      body: Obx(()=> searchData.autoCompleteList.isEmpty ?
+        ListView(
+          children: const [
+            SearchHistoryList(),
+            PopularSearchStockList(),
+          ],
+        ) :
+            SearchAutoCompleteList(controller),
+      )
+      ,
     ); // 키보드 크기에 맞게끔 화면 설정됨
   }
 }
