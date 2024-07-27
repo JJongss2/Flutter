@@ -6,16 +6,16 @@ import 'package:nav/dialog/dialog.dart';
 
 import '../../common/constant/app_colors.dart';
 
-class NotifiactionDialog extends DialogWidget {
+class NotificationDialog extends DialogWidget {
 
   final List<TtossNotification> notifications;
-  NotifiactionDialog(this.notifications, {super.key, super.animation = NavAni.Bottom }); // 밑에 애니메이션이 나옴
+  NotificationDialog(this.notifications, {super.key, super.animation = NavAni.Bottom }); // 밑에 애니메이션이 나옴
 
   @override
-  State<NotifiactionDialog> createState() => _NotifiactionDialogState();
+  State<NotificationDialog> createState() => _NotificationDialogState();
 }
 
-class _NotifiactionDialogState extends DialogState<NotifiactionDialog> {
+class _NotificationDialogState extends DialogState<NotificationDialog> {
   @override
   Widget build(BuildContext context) {
     return Material(

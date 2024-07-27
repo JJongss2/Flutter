@@ -26,7 +26,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             (context, index) =>
                 NotificationItemWidget(notification: notificationDummies[index],
                   onTap: (){
-                    NotifiactionDialog([notificationDummies[0], notificationDummies[1]]).show();
+                    NotificationDialog([notificationDummies[0], notificationDummies[1]]).show();
                 },),
             childCount: notificationDummies.length,
           )),

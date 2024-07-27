@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../common/constants.dart';
 import '../../../../common/widget/w_image_button.dart';
+import 'setting/s_setting.dart';
 
 class StockFragment extends StatefulWidget {
   const StockFragment({super.key});
@@ -50,7 +51,7 @@ class _StockFragmentState extends State<StockFragment>
               ImageButton(
                 imagePath: '$basePath/icon/stock_settings.png',
                 onTap: () {
-                  context.showSnackbar('설정');
+                  Nav.push(SettingScreen());
                 },
               ),
             ], // 위젯 넣는 공간
