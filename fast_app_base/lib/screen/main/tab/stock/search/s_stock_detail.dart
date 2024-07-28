@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 
 class StockDetailScreen extends StatelessWidget {
   final String stockName;
-  const StockDetailScreen(this.stockName, {super.key, });
+  const StockDetailScreen({
+    required this.stockName,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

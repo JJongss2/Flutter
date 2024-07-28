@@ -21,7 +21,7 @@ class SearchAutoCompleteList extends StatelessWidget
           onTap: () {
             controller.clear();
             searchData.addHistory(stock);
-            Nav.push(StockDetailScreen(stockName));
+            Nav.push(StockDetailScreen(stockName: stockName));
           },
           child: stockName.text.make().p(20),
         );
