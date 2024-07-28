@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../../../../../common/data/preference/prefs.dart';
+import '../../../../opensource/s_opensource.dart';
 import 'd_number.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -81,6 +82,12 @@ class _SettingScreenState extends State<SettingScreen> {
                 Prefs.number.set(number);
               }
             }),
+          ),
+          BigButton(
+            '오픈소스 화면',
+            onTap : () async{
+              Nav.push(const OpensourceScreen());
+            }
           ),
           // number dialog
         ],
