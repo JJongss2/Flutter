@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/cli_common.dart';
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/dart/extension/datetime_extension.dart';
 import 'package:fast_app_base/common/data/preference/app_preferences.dart';
@@ -18,8 +19,11 @@ class SettingScreen extends StatefulWidget {
   State<SettingScreen> createState() => _SettingScreenState();
 }
 
-class _SettingScreenState extends State<SettingScreen> {
+class _SettingScreenState extends State<SettingScreen> with SingleTickerProviderStateMixin { // controller가 한개일때는 SingleTickerProviderStateMixin
   final scrollController = ScrollController();
+  late final AnimationController animationController = AnimationController(vsync: this, duration: 2000.ms);
+
+
   bool isPushOn = false;
 
   // @override                            // 고정된 화면에서만 prefs가 변하고 불러옴. 다른화면에서 바뀌면 반영을 못함
@@ -52,6 +56,7 @@ class _SettingScreenState extends State<SettingScreen> {
               Obx(() => Slider(
                     value: Prefs.sliderPosition.get(),
                     onChanged: (value) {
+                      animationController.animateTo(value, duration: 0.ms);
                       Prefs.sliderPosition(
                           value); // == Prefs.sliderPosition.set(value);
                     },
@@ -78,9 +83,9 @@ class _SettingScreenState extends State<SettingScreen> {
 
               Obx(
                 () => BigButton('저장된 숫자 ${Prefs.number.get()}', onTap: () async {
-                  // showDatePicker는 Future 함수이기에 async await 필요
-                  final number = await NumberDialog().show();
-                  if (number!= null){
+                    // showDatePicker는 Future 함수이기에 async await 필요
+                    final number = await NumberDialog().show();
+                    if (number!= null){
                     Prefs.number.set(number);
                   }
                 }),
@@ -92,27 +97,27 @@ class _SettingScreenState extends State<SettingScreen> {
                 }
               ),
               BigButton(
-                  '오픈소스 화면',
+                  '애니메이션 forward',
                   onTap : () async{
-                    Nav.push(const OpensourceScreen());
+                    animationController.forward();
                   }
               ),
               BigButton(
-                  '오픈소스 화면',
+                  '애니메이션 reverse',
                   onTap : () async{
-                    Nav.push(const OpensourceScreen());
+                    animationController.reverse();
                   }
               ),
               BigButton(
-                  '오픈소스 화면',
+                  '애니메이션 repeat',
                   onTap : () async{
-                    Nav.push(const OpensourceScreen());
+                    animationController.repeat();
                   }
               ),
               BigButton(
-                  '오픈소스 화면',
+                  '애니메이션 reset',
                   onTap : () async{
-                    Nav.push(const OpensourceScreen());
+                    animationController.repeat();
                   }
               ),
               BigButton(
@@ -162,7 +167,7 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
             ],
           ),
-          AnimatedAppBar('설정', controller: scrollController,),
+          AnimatedAppBar('설정', controller: scrollController, animationController: animationController,),
         ],
       ),
     );
