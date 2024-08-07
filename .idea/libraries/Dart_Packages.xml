@@ -767,6 +767,20 @@
             </list>
           </value>
         </entry>
+        <entry key="rive">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.13.12/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="rive_common">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/rive_common-0.4.10/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="rxdart">
           <value>
             <list>
@@ -1120,7 +1134,7 @@
         <entry key="web">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/web-1.0.0/lib" />
+              <option value="$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -1276,6 +1290,8 @@
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/quiver-3.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/retrofit-4.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/retrofit_generator-5.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.13.12/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/rive_common-0.4.10/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/sensors_plus-1.4.1/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/sensors_plus_platform_interface-1.2.0/lib" />
@@ -1325,7 +1341,7 @@
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/vxstate-2.3.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.0/lib" />
-      <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/web-1.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/web_socket_channel-2.4.0/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/webkit_inspection_protocol-1.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.4/lib" />
