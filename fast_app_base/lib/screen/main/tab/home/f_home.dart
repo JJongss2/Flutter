@@ -25,13 +25,13 @@ class HomeFragment extends StatefulWidget {
   const HomeFragment({
     Key? key,
   }) : super(key: key);
-
   @override
   State<HomeFragment> createState() => _HomeFragmentState();
 }
 
 class _HomeFragmentState extends State<HomeFragment> {
   bool isLike = false;
+  @override
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +55,15 @@ class _HomeFragmentState extends State<HomeFragment> {
                     bottom: MainScreenState.bottomNavigatorHeight),
                 child: Column(
                   children: [
+                    StreamBuilder(
+                        stream: countStream(5),
+                        builder: (context, snapshot){
+                          final count = snapshot.data;
+                          if(count == null){
+                            return CircularProgressIndicator(); // 로딩
+                          }
+                      return count.text.size(30).bold.make();}
+                    ),
                     SizedBox(height: 250, width: 250, child: RiveLikeButton(isLike,onTapLike: (isLike){
                       setState(() {
                         this.isLike = isLike;
@@ -84,6 +93,14 @@ class _HomeFragmentState extends State<HomeFragment> {
             const TtossAppBar(),
           ],
         ));
+  }
+
+  Stream<int> countStream(int max) async*{
+    await sleepAsync(2.seconds);
+    for (int i = 1; i <= max; i++){
+      yield i;
+      await sleepAsync(1.seconds);
+    }
   }
 
   void showSnackbar(BuildContext context) {
