@@ -3,13 +3,15 @@ import 'package:fast_app_base/screen/main/tab/home/vo/vo_bank.dart';
 class BankAccount {
   final Bank bank;
   int balance;
+  final int userId;
   final String? accountTypeName;
 
   BankAccount(
+    this.userId,
     this.bank,
     this.balance, {
-      this.accountTypeName, // 선언해도되고 선언 안해도됨
-      });
+    this.accountTypeName, // 선언해도되고 선언 안해도됨
+  });
 
   @override
   String toString() {

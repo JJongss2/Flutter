@@ -6,12 +6,12 @@ import 'package:fast_app_base/screen/main/tab/home/banks_dummy.dart';
 import 'package:fast_app_base/screen/main/tab/home/vo/vo_bank_account.dart';
 import 'package:live_background/live_background.dart';
 
-final bankAccountShinhan1 = BankAccount(bankShinhan, 300000000, accountTypeName: "신한 주거래 우대통장(저축예금)");
-final bankAccountShinhan2 = BankAccount(bankShinhan, 300000000, accountTypeName: "저축예금");
-final bankAccountShinhan3 = BankAccount(bankShinhan, 300000000, accountTypeName: "저축예금");
-final bankAccountToss = BankAccount(bankToss, 12365456);
-final bankAccountKakao = BankAccount(bankKakao, 213231, accountTypeName : "입출금통장");
-final bankAccountKakao2 = BankAccount(bankKakao, 456789123, accountTypeName : "특별통장");
+final bankAccountShinhan1 = BankAccount(1,bankShinhan, 300000000, accountTypeName: "신한 주거래 우대통장(저축예금)");
+final bankAccountShinhan2 = BankAccount(2,bankShinhan, 300000000, accountTypeName: "저축예금");
+final bankAccountShinhan3 = BankAccount(3,bankShinhan, 300000000, accountTypeName: "저축예금");
+final bankAccountToss = BankAccount(4,bankToss, 12365456);
+final bankAccountKakao = BankAccount(5,bankKakao, 213231, accountTypeName : "입출금통장");
+final bankAccountKakao2 = BankAccount(5,bankKakao, 456789123, accountTypeName : "특별통장");
 
 main(){
   // 삽입

@@ -12,6 +12,9 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/packages/animations/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/packages/packages/animations/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/packages/packages/animations/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/todo_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/todo_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/todo_app/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
