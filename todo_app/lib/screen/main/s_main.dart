@@ -8,6 +8,7 @@ import '../../common/common.dart';
 import 'w_menu_drawer.dart';
 
 class MainScreen extends StatefulWidget {
+
   const MainScreen({super.key});
 
   @override
@@ -50,8 +51,8 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            WriteTodoDialog().show();
+          onPressed: ()async{
+            final result = await WriteTodoDialog().show();
           },
           child: const Icon(EvaIcons.plus),
         ),

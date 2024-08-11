@@ -2,13 +2,14 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/dart/extension/datetime_extension.dart';
 import 'package:fast_app_base/common/util/app_keyboard_util.dart';
 import 'package:fast_app_base/common/widget/scaffold/bottom_dialog_scaffold.dart';
+import 'package:fast_app_base/screen/main/write/vo_write_to_result.dart';
 import 'package:flutter/material.dart';
 import 'package:nav/dialog/dialog.dart';
 import 'package:after_layout/after_layout.dart';
 import '../../../common/widget/w_round_button.dart';
 import '../../../common/widget/w_rounded_container.dart';
 
-class WriteTodoDialog extends DialogWidget {
+class WriteTodoDialog extends DialogWidget<WriteTodoResult> {
   WriteTodoDialog({super.key});
 
   @override
@@ -50,7 +51,9 @@ class _WriteTodoDialogState extends DialogState<WriteTodoDialog>
                     controller: textController,
                   ),
                 ),
-                RoundButton(text: '추가', onTap: () {})
+                RoundButton(text: '추가', onTap: () {
+                  widget.hide(WriteTodoResult(_selectedDate, textController.text));
+                })
               ],
             )
           ],
