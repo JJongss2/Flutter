@@ -1,10 +1,12 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:fast_app_base/data/memory/vo/todo_data_holder.dart';
 import 'package:fast_app_base/screen/main/tab/tab_item.dart';
 import 'package:fast_app_base/screen/main/tab/tab_navigator.dart';
 import 'package:fast_app_base/screen/main/write/d_write_todo.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/common.dart';
+import '../../data/memory/vo/vo_todo.dart';
 import 'w_menu_drawer.dart';
 
 class MainScreen extends StatefulWidget {
@@ -53,6 +55,13 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         floatingActionButton: FloatingActionButton(
           onPressed: ()async{
             final result = await WriteTodoDialog().show();
+            if (result != null && mounted){ // 스크린이 살아있는지 체크해줌
+              context.holder.notifier.addTodo(Todo(
+                id : DateTime.now().millisecondsSinceEpoch,
+                title: result.text,
+                dueDate: result.dateTime
+              ));
+            }
           },
           child: const Icon(EvaIcons.plus),
         ),
