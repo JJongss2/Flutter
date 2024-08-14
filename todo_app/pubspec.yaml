@@ -97,6 +97,7 @@ dev_dependencies:
   get: ^4.6.6
   flutter_animate: ^4.5.0
   rive: ^0.13.12
+  flutter_bloc: ^8.1.6
 
 
 
