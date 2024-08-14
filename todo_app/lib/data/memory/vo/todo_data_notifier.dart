@@ -8,8 +8,10 @@ class TodoDataNotifier extends ValueNotifier<List<Todo>>{
     value.add(todo);
     notifyListeners(); // value가 변경되었음을 모든 리스너들에게 알림
                        // => UI가 변경된 데이터를 반영
+  }
 
-
+  void notify(){
+    notifyListeners();
   }
 
 }

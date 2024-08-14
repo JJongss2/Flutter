@@ -54,14 +54,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: ()async{
-            final result = await WriteTodoDialog().show();
-            if (result != null && mounted){ // 스크린이 살아있는지 체크해줌
-              context.holder.notifier.addTodo(Todo(
-                id : DateTime.now().millisecondsSinceEpoch,
-                title: result.text,
-                dueDate: result.dateTime
-              ));
-            }
+              context.holder.addTodo();
           },
           child: const Icon(EvaIcons.plus),
         ),
