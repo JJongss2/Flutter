@@ -1,6 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/theme/custom_theme_app.dart';
-import 'package:fast_app_base/data/memory/vo/todo_cubit.dart';
+import 'package:fast_app_base/data/memory/vo/todo_bloc.dart';
 import 'package:fast_app_base/screen/main/s_main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,7 +29,7 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    Get.put(TodoCubit());
+    Get.put(TodoBloc());
     WidgetsBinding.instance.addObserver(this);
   }
 
@@ -44,7 +44,7 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
     return CustomThemeApp(
       child: Builder(builder: (context) {
         return BlocProvider(
-          create: (BuildContext context) =>TodoCubit(),
+          create: (BuildContext context) =>TodoBloc(),
           child: MaterialApp(
             navigatorKey: App.navigatorKey,
             localizationsDelegates: context.localizationDelegates,
