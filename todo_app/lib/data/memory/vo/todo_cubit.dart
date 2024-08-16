@@ -29,6 +29,8 @@ class TodoCubit extends Cubit<TodoBlocState> {
             .millisecondsSinceEpoch,
         title: result.text,
         dueDate: result.dateTime,
+        createdTime: DateTime.now(),
+        status: TodoStatus.incomplete,
       ),);
       emitNewList(copiedOldTodoList);
     }
@@ -37,18 +39,20 @@ class TodoCubit extends Cubit<TodoBlocState> {
   void changeTodoStatus(Todo todo) async {
     final copiedOldTodoList = List.of(state.todoList); // 수정이 가능한 리스트로 만듬
     final todoIndex = copiedOldTodoList.indexWhere((element)=> element.id == todo.id);
+
+    TodoStatus status = todo.status;
     switch (todo.status) {
       case TodoStatus.incomplete:
-        todo.status = TodoStatus.ongoing;
+        status = TodoStatus.ongoing;
       case TodoStatus.ongoing:
-        todo.status = TodoStatus.complete;
+        status = TodoStatus.complete;
       case TodoStatus.complete:
         final result = await ConfirmDialog('정말로 처음 상태로 변경하시겠어요?').show();
         result?.runIfSuccess((data) {
-          todo.status = TodoStatus.incomplete;
+          status = TodoStatus.incomplete;
         });
     }
-    copiedOldTodoList[todoIndex] = todo;
+    copiedOldTodoList[todoIndex] = todo.copyWith(status: status);
     emitNewList(copiedOldTodoList);
   }
 
@@ -57,10 +61,9 @@ class TodoCubit extends Cubit<TodoBlocState> {
   void editTodo(Todo todo) async{
     final result = await WriteTodoDialog(todoForEdit : todo).show();
     if(result != null){
-      todo.title = result.text;
-      todo.dueDate = result.dateTime;
       final oldCopiedList = List<Todo>.from(state.todoList);
-      oldCopiedList[oldCopiedList.indexOf(todo)] = todo;
+      oldCopiedList[oldCopiedList.indexOf(todo)] = todo.copyWith(
+          title: result.text,dueDate:result.dateTime, modifyTime: DateTime.now());
       emitNewList(oldCopiedList);
     }
   }

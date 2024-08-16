@@ -72,9 +72,10 @@ dependencies:
   retrofit: ^4.0.1
   freezed: ^2.3.4
   freezed_annotation: ^2.2.0
-  json_annotation: ^4.8.0
+  json_annotation: ^4.9.0 # 버전을 4.9.0 이상으로 설정
   live_background: ^0.1.3
   animations: ^2.0.11
+  flutter_riverpod: ^2.5.1
 
 dev_dependencies:
   flutter_test:
@@ -98,7 +99,7 @@ dev_dependencies:
   flutter_animate: ^4.5.0
   rive: ^0.13.12
   flutter_bloc: ^8.1.6
-
+  analyzer: '>=4.6.0 <6.0.0' # isar_generator와 호환되는 버전으로 설정
 
 
 # For information on the generic Dart part of this file, see the

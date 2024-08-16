@@ -6,7 +6,7 @@ import 'package:fast_app_base/screen/main/tab/todo/w_fire.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TodoStatusWidget extends StatelessWidget with TodoDataProvider {
+class TodoStatusWidget extends StatelessWidget {
   final Todo todo;
 
   TodoStatusWidget(this.todo, {super.key});
@@ -15,7 +15,7 @@ class TodoStatusWidget extends StatelessWidget with TodoDataProvider {
   Widget build(BuildContext context) {
     return Tap(
       onTap : (){
-        todoData.changeTodoStatus(todo);
+        context.readTodoCubit.changeTodoStatus(todo);
       },
       child: SizedBox(
         width: 50,

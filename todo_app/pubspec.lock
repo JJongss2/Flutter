@@ -18,7 +18,7 @@ packages:
     source: hosted
     version: "1.2.0"
   analyzer:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: analyzer
       sha256: ea3d8652bda62982addfd92fdc2d0214e5f82e43325104990d4f4c4a2a313562
@@ -37,10 +37,10 @@ packages:
     dependency: transitive
     description:
       name: ansicolor
-      sha256: "8bf17a8ff6ea17499e40a2d2542c2f481cd7615760c6d34065cb22bfd22e6880"
+      sha256: "50e982d500bc863e1d703448afdbf9e5a72eb48840a4f766fa361ffd6877055f"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.3"
   archive:
     dependency: transitive
     description:
@@ -165,10 +165,10 @@ packages:
     dependency: transitive
     description:
       name: cached_network_image_platform_interface
-      sha256: ff0c949e323d2a1b52be73acce5b4a7b04063e61414c8ca542dbba47281630a7
+      sha256: "35814b016e37fbdc91f7ae18c8caf49ba5c88501813f73ce8a07027a395e2829"
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.0"
+    version: "4.1.1"
   cached_network_image_web:
     dependency: transitive
     description:
@@ -237,10 +237,10 @@ packages:
     dependency: transitive
     description:
       name: crypto
-      sha256: ff625774173754681d66daaf4a448684fb04b78f902da9cb3d308c19cc5e8bab
+      sha256: ec30d999af904f33454ba22ed9a86162b35e52b44ac4807d1d93c288041d7d27
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.3"
+    version: "3.0.5"
   csslib:
     dependency: transitive
     description:
@@ -277,18 +277,18 @@ packages:
     dependency: "direct main"
     description:
       name: dio
-      sha256: e17f6b3097b8c51b72c74c9f071a605c47bcc8893839bd66732457a5ebe73714
+      sha256: "0dfb6b6a1979dac1c1245e17cef824d7b452ea29bd33d3467269f9bef3715fb0"
       url: "https://pub.dev"
     source: hosted
-    version: "5.5.0+1"
+    version: "5.6.0"
   dio_web_adapter:
     dependency: transitive
     description:
       name: dio_web_adapter
-      sha256: "36c5b2d79eb17cdae41e974b7a8284fec631651d2a6f39a8a2ff22327e90aeac"
+      sha256: "33259a9276d6cea88774a0000cfae0d861003497755969c92faa223108620dc8"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.1"
+    version: "2.0.0"
   easy_localization:
     dependency: "direct main"
     description:
@@ -341,10 +341,10 @@ packages:
     dependency: transitive
     description:
       name: ffi
-      sha256: "493f37e7df1804778ff3a53bd691d8692ddf69702cf4c1c1096a2e41b4779e21"
+      sha256: "16ed7b077ef01ad6170a3d0c57caa4a112a38d7a2ed5602e0aca9ca6f3d98da6"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.2"
+    version: "2.1.3"
   file:
     dependency: transitive
     description:
@@ -386,10 +386,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_cache_manager
-      sha256: a77f77806a790eb9ba0118a5a3a936e81c4fea2b61533033b2b0c3d50bbde5ea
+      sha256: "400b6592f16a4409a7f2bb929a9a7e38c72cceb8ffb99ee57bbf2cb2cecf8386"
       url: "https://pub.dev"
     source: hosted
-    version: "3.4.0"
+    version: "3.4.1"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -419,6 +419,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  flutter_riverpod:
+    dependency: "direct main"
+    description:
+      name: flutter_riverpod
+      sha256: "0f1974eff5bbe774bf1d870e406fc6f29e3d6f1c46bd9c58e7172ff68a785d7d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.1"
   flutter_shaders:
     dependency: transitive
     description:
@@ -769,10 +777,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_android
-      sha256: "490539678396d4c3c0b06efdaab75ae60675c3e0c66f72bc04c2e2c1e0e2abeb"
+      sha256: "6f01f8e37ec30b07bc424b4deabac37cacb1bc7e2e515ad74486039918a37eb7"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.9"
+    version: "2.2.10"
   path_provider_foundation:
     dependency: transitive
     description:
@@ -873,10 +881,10 @@ packages:
     dependency: "direct main"
     description:
       name: retrofit
-      sha256: "13a2865c0d97da580ea4e3c64d412d81f365fd5b26be2a18fca9582e021da37a"
+      sha256: "1fceca35cc68d5f14ff70ae830acbf157263b42e1cdfd5b38045ca517535b734"
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.0"
+    version: "4.2.0"
   retrofit_generator:
     dependency: "direct dev"
     description:
@@ -901,6 +909,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.4.10"
+  riverpod:
+    dependency: transitive
+    description:
+      name: riverpod
+      sha256: f21b32ffd26a36555e501b04f4a5dca43ed59e16343f1a30c13632b2351dfa4d
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.1"
   rxdart:
     dependency: transitive
     description:
@@ -929,10 +945,10 @@ packages:
     dependency: transitive
     description:
       name: shared_preferences_foundation
-      sha256: "776786cff96324851b656777648f36ac772d88bc4c669acff97b7fce5de3c849"
+      sha256: c4b35f6cb8f63c147312c054ce7c2254c8066745125264f0c88739c417fc9d9f
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.1"
+    version: "2.5.2"
   shared_preferences_linux:
     dependency: transitive
     description:
@@ -1082,6 +1098,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
+  state_notifier:
+    dependency: transitive
+    description:
+      name: state_notifier
+      sha256: b8677376aa54f2d7c58280d5a007f9e8774f1968d1fb1c096adcb4792fba29bb
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   stream_channel:
     dependency: transitive
     description:
@@ -1278,10 +1302,10 @@ packages:
     dependency: transitive
     description:
       name: web_socket_channel
-      sha256: d88238e5eac9a42bb43ca4e721edba3c08c6354d4a53063afaa568516217621b
+      sha256: "58c6666b342a38816b2e7e50ed0f1e261959630becd4c879c4f26bfa14aa5a42"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.0"
+    version: "2.4.5"
   webkit_inspection_protocol:
     dependency: transitive
     description:

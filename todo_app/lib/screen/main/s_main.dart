@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import '../../common/common.dart';
 import '../../data/memory/vo/vo_todo.dart';
 import 'w_menu_drawer.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainScreen extends StatefulWidget {
 
@@ -54,7 +55,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: ()async{
-              todoData.addTodo();
+            context.readTodoCubit.addTodo();
           },
           child: const Icon(EvaIcons.plus),
         ),
