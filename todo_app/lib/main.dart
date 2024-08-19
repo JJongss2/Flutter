@@ -13,7 +13,7 @@ void main() async {
   await AppSharedPreference.init();
 
   AppSharedPreference.setCount(0);
-  final count = AppSharedPreference.getCount();
+  const count = AppSharedPreference.getCount;
 
   runApp(EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('ko')],
